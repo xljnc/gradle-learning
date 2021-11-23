@@ -1,0 +1,8 @@
+group 'com.wt.test'
+version '1.0.0-SNAPSHOT'
+
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
