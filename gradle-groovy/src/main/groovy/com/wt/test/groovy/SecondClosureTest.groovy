@@ -23,3 +23,7 @@ def demo(clo){
     clo.call("Shit");
 }
 demo(clos)
+
+1.upto(10,{ param -> println("item: " + param)})
+
+1.upto(10){ param -> println("item: " + param)}
