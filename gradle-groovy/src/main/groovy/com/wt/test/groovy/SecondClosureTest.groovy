@@ -24,6 +24,10 @@ def demo(clo){
 }
 demo(clos)
 
+demo() { param ->
+    println("${greeting} ${param}")
+}
+
 1.upto(10,{ param -> println("item: " + param)})
 
 1.upto(10){ param -> println("item: " + param)}
