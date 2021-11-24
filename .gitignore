@@ -26,3 +26,6 @@ hs_err_pid*
 /.gradle/
 /.idea/
 /gradle/
+/spring-demo/build/
+/gradle-groovy/build/
+/gradle-java/build/

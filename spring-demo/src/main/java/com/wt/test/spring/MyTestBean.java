@@ -5,7 +5,7 @@ package com.wt.test.spring;
  * @date 2021/11/24
  */
 public class MyTestBean {
-	private String name = "ChenHao";
+	private String name = "qiyu";
 
 	public MyTestBean(String name) {
 		this.name = name;
