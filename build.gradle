@@ -6,3 +6,10 @@ task hello {
         println 'Hello world!'
     }
 }
+
+
+task upper{
+    def text = "Hello World"
+    println text
+    println text.toUpperCase()
+}
