@@ -6,3 +6,11 @@ repositories {
     maven { name "Alibaba" ; url "https://maven.aliyun.com/repository/public" }
     mavenCentral()
 }
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { name "Alibaba" ; url 'https://maven.aliyun.com/repository/public' }
+        mavenCentral()
+    }
+}
