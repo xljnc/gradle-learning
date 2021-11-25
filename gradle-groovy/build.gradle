@@ -19,26 +19,26 @@ test {
     useJUnitPlatform()
 }
 
-task hello {
-    doLast {
-        println 'Hello world!'
-    }
-}
-
-task upper{
-    def text = "Hello World"
-    println text
-    println text.toUpperCase()
-}
-
-task lower(dependsOn: upper){
-    def text = "Hello World"
-    println text
-    println text.toLowerCase()
-}
-
-4.times { counter ->
-    task "task$counter"  {
-        println "I'm task number $counter"
-    }
-}
+//task hello {
+//    doLast {
+//        println 'Hello world!'
+//    }
+//}
+//
+//task upper{
+//    def text = "Hello World"
+//    println text
+//    println text.toUpperCase()
+//}
+//
+//task lower(dependsOn: upper){
+//    def text = "Hello World"
+//    println text
+//    println text.toLowerCase()
+//}
+//
+//4.times { counter ->
+//    task "task$counter"  {
+//        println "I'm task number $counter"
+//    }
+//}

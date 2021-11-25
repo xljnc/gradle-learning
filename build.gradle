@@ -1,16 +1,19 @@
 group 'com.wt.test'
 version '1.0.0-SNAPSHOT'
 
-repositories {
-    mavenLocal()
-    maven { name "Alibaba" ; url "https://maven.aliyun.com/repository/public" }
-    mavenCentral()
-}
+subprojects {
 
-buildscript {
     repositories {
         mavenLocal()
-        maven { name "Alibaba" ; url 'https://maven.aliyun.com/repository/public' }
+        maven { name "Alibaba"; url "https://maven.aliyun.com/repository/public" }
         mavenCentral()
+    }
+
+    buildscript {
+        repositories {
+            mavenLocal()
+            maven { name "Alibaba"; url 'https://maven.aliyun.com/repository/public' }
+            mavenCentral()
+        }
     }
 }
