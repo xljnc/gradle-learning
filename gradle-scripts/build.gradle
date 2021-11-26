@@ -1,0 +1,18 @@
+group 'com.wt.test'
+version '1.0.0-SNAPSHOT'
+
+task compile {
+    println "task ${name}"
+}
+
+task compileTest(dependsOn: compile) {
+    println "task ${name}"
+}
+
+task test(dependsOn: [compile, compileTest]) {
+    println "task ${name}"
+}
+
+task dist(dependsOn: [compile, test]) {
+    println "task ${name}"
+}

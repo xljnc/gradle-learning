@@ -2,4 +2,5 @@ rootProject.name = 'gradle-learning'
 include 'gradle-java'
 include 'gradle-groovy'
 include 'spring-demo'
+include 'gradle-scripts'
 
