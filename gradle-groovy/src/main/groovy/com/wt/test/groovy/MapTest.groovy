@@ -13,3 +13,5 @@ println map1.get("list") + 1
 
 printf "%d %f %s \n", [1, 1.1, "1.2"]
 
+for (entry in map1)
+    println "key:${entry.key},value:${entry.value},class:${entry.value.class}"
