@@ -1,5 +1,7 @@
 package com.wt.test.groovy
 
+import groovy.transform.Field
+
 /**
  *
  *
@@ -31,3 +33,13 @@ def intLeft = 1;
 add(intLeft, 1)
 println intLeft
 
+
+def echo(name) {
+    println "echo ${name}"
+    println "echo ${staticName}";
+}
+
+@Field
+def staticName = "Ken"
+
+echo("Ryu")
