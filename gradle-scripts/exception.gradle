@@ -1,0 +1,10 @@
+
+task X {
+    if (project.hasProperty("excludeX"))
+        throw new StopExecutionException()
+    println "Running X"
+}
+
+task Y(dependsOn: "X") {
+    println "Running Y"
+}

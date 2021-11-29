@@ -1,0 +1,5 @@
+println "configuring $project"
+
+task greeting  {
+    println "hello world"
+}
