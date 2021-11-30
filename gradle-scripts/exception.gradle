@@ -1,4 +1,3 @@
-
 task X {
     if (project.hasProperty("excludeX")) {
         logger.error("excludeX=true, stop executeing task X")

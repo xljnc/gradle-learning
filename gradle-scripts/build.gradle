@@ -3,6 +3,7 @@ version '1.0.0-SNAPSHOT'
 
 apply from: "greeting.gradle"
 apply from: "exception.gradle"
+apply from: "rules.gradle"
 
 task compile {
     println "task ${name}"
