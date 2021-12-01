@@ -1,6 +1,8 @@
 group 'com.wt.test'
 version '1.0.0-SNAPSHOT'
 
+description = "Gradle测试脚本"
+
 apply from: "greeting.gradle"
 apply from: "exception.gradle"
 apply from: "rules.gradle"
@@ -20,3 +22,19 @@ task test(dependsOn: [compile, compileTest]) {
 task dist(dependsOn: [compile, test]) {
     println "task ${name}"
 }
+
+task install(dependsOn: [dist]) {
+    println "task ${name}"
+}
+
+project.ext.tag="scripts"
+
+println project.ext.tag
+
+ext{
+    tag = "shit"
+}
+
+println project.ext.tag
+
+println userName
