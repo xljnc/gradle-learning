@@ -6,7 +6,7 @@ description = "Gradle测试脚本"
 apply from: "greeting.gradle"
 apply from: "exception.gradle"
 apply from: "rules.gradle"
-
+apply from: "file.gradle"
 
 task prepareKotlinBuildScriptModel {
 
