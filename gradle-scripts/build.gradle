@@ -7,6 +7,11 @@ apply from: "greeting.gradle"
 apply from: "exception.gradle"
 apply from: "rules.gradle"
 
+
+task prepareKotlinBuildScriptModel {
+
+}
+
 task compile {
     println "task ${name}"
 }
@@ -38,3 +43,4 @@ ext{
 println project.ext.tag
 
 println userName
+
