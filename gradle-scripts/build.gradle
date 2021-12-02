@@ -8,39 +8,51 @@ apply from: "exception.gradle"
 apply from: "rules.gradle"
 apply from: "file.gradle"
 
+println "configuring $project"
+
 task prepareKotlinBuildScriptModel {
 
 }
 
 task compile {
-    println "task ${name}"
+    doLast {
+        println "task ${name}"
+    }
 }
 
 task compileTest(dependsOn: compile) {
-    println "task ${name}"
+    doLast {
+        println "task ${name}"
+    }
 }
 
 task test(dependsOn: [compile, compileTest]) {
-    println "task ${name}"
+    doLast {
+        println "task ${name}"
+    }
 }
 
 task dist(dependsOn: [compile, test]) {
-    println "task ${name}"
+    doLast {
+        println "task ${name}"
+    }
 }
 
 task install(dependsOn: [dist]) {
-    println "task ${name}"
+    doLast {
+        println "task ${name}"
+    }
 }
 
-project.ext.tag="scripts"
-
-println project.ext.tag
-
-ext{
-    tag = "shit"
-}
-
-println project.ext.tag
-
-println userName
+//project.ext.tag = "scripts"
+//
+//println project.ext.tag
+//
+//ext {
+//    tag = "shit"
+//}
+//
+//println project.ext.tag
+//
+//println userName
 

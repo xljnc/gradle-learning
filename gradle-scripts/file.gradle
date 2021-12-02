@@ -1,18 +1,16 @@
 def versionFile = file("version.properties")
 
 task loadVersion() {
-    doFirst {
-        logger.quiet("reading version properties")
-    }
-    if (!versionFile.exists()) {
-        logger.error("version properties file not exists")
-        throw new StopExecutionException("version properties file not exists");
-    }
-    def br = new BufferedReader(new FileReader(versionFile))
-    def s = null;
-    while ( (s = br.readLine()) != null)
-        println "${s}"
     doLast {
+        logger.quiet("reading version properties")
+        if (!versionFile.exists()) {
+            logger.error("version properties file not exists")
+            throw new StopExecutionException("version properties file not exists");
+        }
+        def br = new BufferedReader(new FileReader(versionFile))
+        def s = null;
+        while ((s = br.readLine()) != null)
+            println "${s}"
         logger.quiet("finish reading version properties")
     }
 }

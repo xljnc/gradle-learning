@@ -1,5 +1,6 @@
-println "configuring $project"
 
 task greeting  {
-    println "hello world"
+    doLast {
+        println "hello world"
+    }
 }

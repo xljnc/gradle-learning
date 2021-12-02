@@ -1,11 +1,14 @@
 tasks.addRule("Pattern: ping<ID>") {
-    taskName -> {
-        if (taskName.startsWith("ping")) {
-            task(taskName) {
-                println "Pinging: " + (taskName - 'ping')
+    taskName ->
+        {
+            if (taskName.startsWith("ping")) {
+                task(taskName) {
+                    doLast {
+                        println "Pinging: " + (taskName - 'ping')
+                    }
+                }
             }
         }
-    }
 }
 
 task groupPing {
