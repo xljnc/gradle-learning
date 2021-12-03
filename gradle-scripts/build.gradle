@@ -10,25 +10,29 @@ apply from: "file.gradle"
 apply from: "customTask.gradle"
 
 
-beforeEvaluate {
-    println "configuring $project"
+//class CompileTaskListener implements TaskExecutionGraphListener {
+//    @Override
+//    void graphPopulated(TaskExecutionGraph graph) {
+//       graph.whenReady {
+//           logger.info("task graph ready")
+//       }
+//    }
+//}
+//
+//gradle.taskGraph.addTaskExecutionGraphListener(new CompileTaskListener())
+
+//任务图
+gradle.taskGraph.whenReady {
+    println "config phase: taskGraph.whenReady"
 }
 
-afterEvaluate {
-    println "configuring finished"
+gradle.taskGraph.beforeTask{
+    println "execute phase: taskGraph.beforeTask"
 }
 
-
-class CompileTaskListener implements TaskExecutionGraphListener {
-    @Override
-    void graphPopulated(TaskExecutionGraph graph) {
-       graph.whenReady {
-           logger.info("task graph ready")
-       }
-    }
+gradle.taskGraph.afterTask {
+    println "execute phase: taskGraph.afterTask"
 }
-
-gradle.taskGraph.addTaskExecutionGraphListener(new CompileTaskListener())
 
 task prepareKotlinBuildScriptModel {
 

@@ -4,3 +4,18 @@ include 'gradle-groovy'
 include 'spring-demo'
 include 'gradle-scripts'
 
+gradle.settingsEvaluated {
+    println 'init phase: settingsEvaluated'
+}
+
+gradle.projectsLoaded {
+    println 'init phase: projectsLoaded'
+}
+
+gradle.beforeProject {
+    println "init phase: beforeProject ${it.name}"
+}
+
+gradle.afterProject {
+    println "config phase: afterProject ${it.name}"
+}
