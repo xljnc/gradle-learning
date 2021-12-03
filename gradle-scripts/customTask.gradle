@@ -24,6 +24,7 @@ class ProjectVersionTask extends DefaultTask {
 
     @TaskAction
     void start() {
+        logger.info("ProjectVersionTask start.")
         if (destFile.exists())
             destFile.delete()
         destFile.createNewFile()
