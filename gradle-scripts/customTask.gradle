@@ -1,0 +1,46 @@
+task makeReleaseVersion(type: ProjectVersionTask) {
+    projectVersion = new ProjectVersion()
+    projectVersion.major = 1
+    projectVersion.minor = 2
+    projectVersion.release = true
+    destFile = file("version.properties")
+}
+
+class ProjectVersionTask extends DefaultTask {
+//    @Input
+//    @Optional
+    @Internal
+    ProjectVersion projectVersion;
+
+//    @OutputFile
+//    @Optional
+    @Internal
+    File destFile;
+
+    ProjectVersionTask() {
+        group = 'versioning'
+        description = 'Makes project a release version.'
+    }
+
+    @TaskAction
+    void start() {
+        if (destFile.exists())
+            destFile.delete()
+        destFile.createNewFile()
+        BufferedWriter bw = new BufferedWriter(new FileWriter(destFile))
+        bw.write(projectVersion.toString())
+        bw.newLine()
+    }
+}
+
+
+class ProjectVersion {
+    Integer major;
+    Integer minor;
+    Boolean release;
+
+    @Override
+    String toString() {
+        "$major.$minor${release ? '' : '-SNAPSHOT'}"
+    }
+}
