@@ -11,6 +11,17 @@ apply from: "customTask.gradle"
 
 println "configuring $project"
 
+class CompileTaskListener implements TaskExecutionGraphListener {
+    @Override
+    void graphPopulated(TaskExecutionGraph graph) {
+       graph.whenReady {
+           logger.info("task graph ready")
+       }
+    }
+}
+
+gradle.taskGraph.addTaskExecutionGraphListener(new CompileTaskListener())
+
 task prepareKotlinBuildScriptModel {
 
 }
