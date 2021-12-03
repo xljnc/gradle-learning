@@ -1,0 +1,38 @@
+
+task makeReleaseVersion(type: ProjectVersionTask) {
+    release = version.release
+    destFile = versionFile
+}
+
+class ProjectVersionTask extends DefaultTask{
+    @Input
+    Boolean release;
+
+    @OutputFile
+    File destFile;
+
+    ReleaseVersionTask() {
+        group = 'versioning'
+        description = 'Makes project a release version.'
+    }
+
+    @TaskAction
+    void start() {
+        project.version.release = true
+        ant.propertyfile(file: destFile) {
+            entry(key: 'release', type: 'string', operation: '=', value: 'true')
+        }
+    }
+}
+
+
+class ProjectVersion {
+    Integer major;
+    Integer minor;
+    Boolean release;
+
+    @Override
+    String toString(){
+        "$major.$minor${release ? '' : '-SNAPSHOT'}"
+    }
+}
