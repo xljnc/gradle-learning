@@ -9,7 +9,6 @@ apply from: "rules.gradle"
 apply from: "file.gradle"
 apply from: "customTask.gradle"
 
-
 //class CompileTaskListener implements TaskExecutionGraphListener {
 //    @Override
 //    void graphPopulated(TaskExecutionGraph graph) {
@@ -23,6 +22,7 @@ apply from: "customTask.gradle"
 
 //任务图
 gradle.taskGraph.whenReady {
+//   println getRepositories().mavenLocal().getUrl()
     println "config phase: taskGraph.whenReady"
 }
 
