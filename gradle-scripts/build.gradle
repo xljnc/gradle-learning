@@ -9,6 +9,19 @@ apply from: "rules.gradle"
 apply from: "file.gradle"
 apply from: "customTask.gradle"
 
+configurations {
+    "gradle-scripts" {
+        description = "Gradle Scripts"
+        visible = false
+    }
+}
+
+task printConfiguration{
+    doLast {
+       println configurations.getByName("gradle-scripts").getDescription()
+    }
+}
+
 //class CompileTaskListener implements TaskExecutionGraphListener {
 //    @Override
 //    void graphPopulated(TaskExecutionGraph graph) {
