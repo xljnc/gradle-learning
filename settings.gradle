@@ -1,8 +1,12 @@
 rootProject.name = 'gradle-learning'
-include 'gradle-java'
-include 'gradle-groovy'
-include 'spring-demo'
-include 'gradle-scripts'
+//include 'gradle-java'
+//include 'gradle-groovy'
+//include 'spring-demo'
+//include 'gradle-scripts'
+
+include 'trade-web'
+include 'trade-service'
+include 'trade-api'
 
 //gradle.settingsEvaluated {
 //    println 'init phase: settingsEvaluated'
@@ -19,3 +23,5 @@ include 'gradle-scripts'
 //gradle.afterProject {
 //    println "config phase: afterProject ${it.name}"
 //}
+
+
