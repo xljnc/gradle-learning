@@ -20,3 +20,8 @@ test {
     useJUnitPlatform()
 }
 
+task printDependencies {
+    doLast {
+    }
+}
+

@@ -35,6 +35,7 @@ task printConfiguration{
 
 //任务图
 gradle.taskGraph.whenReady {
+//   println getRepositories().mavenLocal().getUrl()
     println "config phase: taskGraph.whenReady"
 }
 
