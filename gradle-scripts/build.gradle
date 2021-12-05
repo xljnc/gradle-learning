@@ -33,19 +33,19 @@ task printConfiguration{
 //
 //gradle.taskGraph.addTaskExecutionGraphListener(new CompileTaskListener())
 
-//任务图
-gradle.taskGraph.whenReady {
-//   println getRepositories().mavenLocal().getUrl()
-    println "config phase: taskGraph.whenReady"
-}
-
-gradle.taskGraph.beforeTask{
-    println "execute phase: taskGraph.beforeTask"
-}
-
-gradle.taskGraph.afterTask {
-    println "execute phase: taskGraph.afterTask"
-}
+////任务图
+//gradle.taskGraph.whenReady {
+////   println getRepositories().mavenLocal().getUrl()
+//    println "config phase: taskGraph.whenReady"
+//}
+//
+//gradle.taskGraph.beforeTask{
+//    println "execute phase: taskGraph.beforeTask"
+//}
+//
+//gradle.taskGraph.afterTask {
+//    println "execute phase: taskGraph.afterTask"
+//}
 
 task prepareKotlinBuildScriptModel {
 
