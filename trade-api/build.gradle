@@ -1,5 +1,2 @@
 description "trade api"
 
-plugins {
-    id 'java'
-}
