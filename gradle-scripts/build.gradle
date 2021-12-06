@@ -3,11 +3,11 @@ version '1.0.0-SNAPSHOT'
 
 description = "Gradle测试脚本"
 
-apply from: "greeting.gradle"
-apply from: "exception.gradle"
-apply from: "rules.gradle"
-apply from: "file.gradle"
-apply from: "customTask.gradle"
+//apply from: "greeting.gradle"
+//apply from: "exception.gradle"
+//apply from: "rules.gradle"
+//apply from: "file.gradle"
+//apply from: "customTask.gradle"
 
 configurations {
     "gradle-scripts" {
